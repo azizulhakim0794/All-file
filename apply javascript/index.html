@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advance javaScript</title>
+</head>
+<body>
+    <div class="article">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto molestiae nobis qui saepe consequuntur et perferendis voluptas inventore laudantium possimus, cum alias necessitatibus numquam aspernatur.</p>
+        <h2 class="author">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+    </div>
+    <div class="article">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur placeat delectus iste eos odio. Velit quibusdam recusandae quo eum voluptatem exercitationem ratione aspernatur? Officia, sed.</p>
+        <h2 class="author">Doloremque repellendus dolorem, animi magni amet necessitatibus!</h2>
+    </div>
+    <div class="article">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ipsum impedit, ullam delectus atque qui exercitationem temporibus iure neque, quaerat iste nemo voluptatum. Minus, consequuntur.</p>
+        <h2 class="author">Exercitationem deleniti sed repellat voluptatibus neque reiciendis.</h2>
+    </div>
+    <script>
+        var authors = document.getElementsByClassName('author');
+
+        for (var i = 0; i < authors.length; i++){
+            var elements = authors[i];
+            elements.style.backgroundColor = 'lightblue'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultsheet - Marksheet generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="main-title">Dynamic Grading</h2>
+        <div class="header-box">
+            <div class="header">
+                <span>Subject</span>
+                <span>Marks</span>
+                <span>Action</span>
+                <span>Grade</span>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <label for="bangla" id="bangla">Bangla</label>
+                    <div class="marks-box">
+                        <input type="text" id="holdBangla" placeholder="Number you got" />
+                    </div>
+                    <div class="action-box">
+                        <button id="banglaBtn">Calculate</button>
+                    </div>
+                    <div class="grade-box">
+                        <p id="banglaGrade"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="english">English</label>
+                    <div class="marks-box">
+                        <input type="text" placeholder="Number you got" />
+                    </div>
+                    <div class="action-box">
+                        <button>Calculate</button>
+                    </div>
+                    <div class="grade-box">
+                        <p>F</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ict">ICT</label>
+                    <div class="marks-box">
+                        <input type="text" placeholder="Number you got" />
+                    </div>
+                    <div class="action-box">
+                        <button>Calculate</button>
+                    </div>
+                    <div class="grade-box">
+                        <p>F</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Total Mark: <strong>00</strong></p>
+                <div class="action-box">
+                    <button>Calculate</button>
+                </div>
+
+                <p>Final Grade: <strong>F</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('banglaBtn').addEventListener("click", function(){
+        let subjectGrade = document.getElementById('banglaGrade')
+   subjectGradeNumber("holdBangla", subjectGrade);
+   })
+// document.getElementById('banglaBtn').addEventListener("click", function(){
+//    let banglaNumber = document.getElementById('holdBangla').value
+//    let banglaNumberParse = parseFloat(banglaNumber);
+
+//    if(banglaNumberParse < 0){
+//        alert("Please Enter a valid Number In   0 - 100");
+//    }
+//    if( banglaNumberParse >= 101){
+//        alert("Please Enter a valid Number In   0 - 100");
+//    }
+//    else if(banglaNumberParse <= 32){
+//    document.getElementById('banglaGrade').innerText = "F"
+//    }
+//    else if(banglaNumberParse <= 39){
+//    document.getElementById('banglaGrade').innerText = "D"
+//    }
+//    else if(banglaNumberParse <= 49){
+//    document.getElementById('banglaGrade').innerText = "C"
+//    }
+//    else if(banglaNumberParse <= 59){
+//    document.getElementById('banglaGrade').innerText = "B"
+//     }
+//    else if(banglaNumberParse <= 69){
+//    document.getElementById('banglaGrade').innerText = "A-"
+//    }
+//    else if(banglaNumberParse <= 79){
+//    document.getElementById('banglaGrade').innerText = "A"
+//    }
+//    else{
+//    document.getElementById('banglaGrade').innerText = "A+"
+//    }
+// })
+function subjectGradeNumber(id, subjectGrade){
+    let subjectNumber = document.getElementById(id).value
+   let subjectNumberParse = parseFloat(subjectNumber);
+
+   if(subjectNumberParse < 0){
+       alert("Please Enter a valid Number In   0 - 100");
+   }
+   if( subjectNumberParse >= 101){
+       alert("Please Enter a valid Number In   0 - 100");
+   }
+   else if(subjectNumberParse <= 32){
+   document.getElementById(subjectGrade).innerText = "F"
+   }
+   else if(subjectNumberParse <= 39){
+   document.getElementById(subjectGrade).innerText = "D"
+   }
+   else if(subjectNumberParse <= 49){
+   document.getElementById(subjectGrade).innerText = "C"
+   }
+   else if(subjectNumberParse <= 59){
+   document.getElementById(subjectGrade).innerText = "B"
+    }
+   else if(subjectNumberParse <= 69){
+   document.getElementById(subjectGrade).innerText = "A-"
+   }
+   else if(subjectNumberParse <= 79){
+   document.getElementById(subjectGrade).innerText = "A"
+   }
+   else if(subjectNumberParse <= 100){
+   document.getElementById(subjectGrade).innerText = "A+"
+   }
+   return subjectGrade;
+}
+
+</script>
+
+</html>

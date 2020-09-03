@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(153, 75, 51);
+    margin: 0 auto;
+    padding:100px;
+    
+    transition: width 1s ,height 2s,transform 1s;
+    animation-name:tumzid;
+    animation-duration:2s;
+    
+
+
+}
+.box2{
+    margin-top: 100px;
+    width: 200px;
+    margin-bottom: 500px;
+    height: 200px;
+    background-color: rgb(153, 75, 51);
+    margin: 0 auto;
+}
+.box:hover{
+    width: 400px;
+    height: 400px;
+    transform:rotate(360deg);
+ 
+ 
+}
+@keyframes tumzid{
+    background-color :green;
+}
